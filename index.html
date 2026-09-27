@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Zrcadlení telefonu</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f6f8;
+      color: #202124;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: min(1000px, 92%);
+      padding: 50px 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 0 0 10px;
+      font-size: 2.2rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 30px 22px;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid #e3e5e8;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+    }
+
+    .icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: #666;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    .guide {
+      background: white;
+      border: 1px solid #e3e5e8;
+      border-radius: 16px;
+      margin-top: 30px;
+      padding: 28px 32px;
+    }
+
+    .guide h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+
+    .guide ol {
+      margin: 0;
+      padding-left: 24px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        padding: 30px 0;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .guide {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <h1>Zrcadlení telefonu</h1>
+    <div class="subtitle">
+      Promítnutí obrazovky telefonu na počítač
+    </div>
+
+    <div class="cards">
+
+      <a
+        class="card"
+        href="https://webcast.airdroid.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        <div class="icon">🖥️</div>
+        <h2>AirDroid Cast Web</h2>
+        <p>
+          Otevřít stránku na počítači a zobrazit QR kód.
+        </p>
+      </a>
+
+      <a
+        class="card"
+        href="https://play.google.com/store/apps/details?id=com.sand.aircast"
+        target="_blank"
+        rel="noopener"
+      >
+        <div class="icon">🤖</div>
+        <h2>Android</h2>
+        <p>
+          Stáhnout aplikaci AirDroid Cast do telefonu.
+        </p>
+      </a>
+
+      <a
+        class="card"
+        href="https://apps.apple.com/app/airdroid-cast/id1539892125"
+        target="_blank"
+        rel="noopener"
+      >
+        <div class="icon">🍎</div>
+        <h2>iPhone / iPad</h2>
+        <p>
+          Stáhnout aplikaci AirDroid Cast pro iOS.
+        </p>
+      </a>
+
+    </div>
+
+    <section class="guide">
+
+      <h2>Jak zrcadlit telefon</h2>
+
+      <ol>
+        <li>Na počítači otevři <strong>AirDroid Cast Web</strong>.</li>
+        <li>V telefonu spusť aplikaci <strong>AirDroid Cast</strong>.</li>
+        <li>Telefonem naskenuj <strong>QR kód</strong> zobrazený na počítači.</li>
+        <li>V telefonu potvrď sdílení obrazovky.</li>
+        <li>Obraz telefonu se zobrazí v prohlížeči na počítači.</li>
+      </ol>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
